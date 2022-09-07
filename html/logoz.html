@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <title>注册</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .main {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            height: 81px;
+            background-color: #1a2b38;
+        }
+        
+        .top {
+            height: 100%;
+        }
+        
+        .top img {
+            margin-top: 2px;
+            width: 200px;
+            float: left;
+        }
+        
+        .top ul {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .top ul li {
+            display: block;
+            float: left;
+            transition: 0.3s;
+        }
+        
+        .top ul li:hover {
+            background-color: #aaa;
+        }
+        
+        .top ul li.liang {
+            background-color: #aaa;
+        }
+        
+        .top ul li a:hover {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .top ul li a {
+            display: block;
+            padding: 0 25px;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+        .top .top-you {
+            float: right;
+        }
+        
+        .top .top-you li span.iconfont {
+            color: #fff;
+        }
+        
+        #banner {
+            height: 425px;
+        }
+        
+        #banner .box {
+            margin-top: 15px;
+            height: 400px;
+            background-color: #ccc;
+            box-sizing: border-box;
+            padding: 10px 1px 1px;
+            border-radius: 5px;
+        }
+        
+        #banner .box .zhu {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 35px;
+            margin-left: 20px;
+        }
+        
+        #banner .box .xin {
+            height: 355px;
+            background-color: #fff;
+        }
+        
+        #banner .box .xin table {
+            width: 600px;
+            height: 355px;
+            margin: auto;
+            font-weight: 600;
+        }
+        
+        #banner .box .xin table td {
+            padding-top: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #banner .box .xin table tr:nth-child(4) td {
+            border-bottom: 0px;
+        }
+        
+        #banner .box .xin table td div,
+        span {
+            font-size: 12px;
+        }
+        
+        #banner .box .xin table td a {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #ccc;
+        }
+        
+        #banner .box .xin table td span {
+            font-size: 12px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        #bottom {
+            height: 320px;
+            background-color: rgb(26, 43, 56);
+            padding-top: 100px;
+        }
+        
+        #bottom .b-left {
+            float: left;
+            width: 500px;
+            height: 200px;
+            padding: 20px 40px;
+        }
+        
+        #bottom .b-left img {
+            width: 300px;
+        }
+        
+        #bottom .b-left div {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        
+        #bottom .b-right {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        #bottom .main .b-right table {
+            margin-top: 20px;
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+        
+        #bottom .main .b-right table th {
+            color: #fff;
+        }
+        
+        #bottom .b-right td {
+            width: 300px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #999;
+            text-align: center;
+        }
+        
+        #bottom .b-right td:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top main">
+            <img src="../images/logo.png" alt="">
+            <ul class="nav-1">
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li>
+                    <a href="luntan.html">论坛</a>
+                </li>
+                <li>
+                    <a href="zixun.html">咨询</a>
+                </li>
+                <li>
+                    <a href="jiaocheng.html">教程</a>
+                </li>
+                <li>
+                    <a href="zhuangbei.html">装备</a>
+                </li>
+                <li>
+                    <a href="jingcai.html">精彩</a>
+                </li>
+                <li>
+                    <a href="jiameng.html">加盟</a>
+                </li>
+                <li>
+                    <a href="gengduo.html">更多</a>
+                </li>
+            </ul>
+            <ul class="top-you">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe604;</span></a>
+                </li>
+                <li>
+                    <a href="logod.html">
+                        登录
+                    </a>
+                </li>
+                <li class="liang">
+                    <a href="#">注册</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="main">
+            <div class="box">
+                <div class="zhu">注册</div>
+                <div class="xin">
+                    <table>
+                        <tr>
+                            <td valign="top">Email:</td>
+                            <td valign="top">
+                                <input type="emial">
+                                <div>
+                                    注册需要验证邮箱，请务必填写正确的邮箱，提交后请及时查收邮件。<br>您可能需要等待几分钟才能收到邮件，如果收件箱没有，请检查一下垃圾邮件箱。</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">验证问答:</td>
+                            <td valign="top">
+                                <input type="emial"><span>换一个</span>
+                                <div>13-2=?</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top"> </td>
+                            <td valign="top">
+                                <a href="#">提交</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">快捷登录:</td>
+                            <td valign="top">
+                                <a href="#">QQ账号登录</a>
+                                <a href="#">微信账号登录</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="main">
+            <div class="b-left">
+                <img src="../images/logo.png" alt="">
+                <div>传承不变，热爱不变。轮滑人，加油！</div>
+            </div>
+            <div class="b-right">
+                <table>
+                    <tr>
+                        <th>关于</th>
+                        <th>活动</th>
+                        <th>翱翔轮滑社</th>
+                    </tr>
+                    <tr>
+                        <td>关于我们</td>
+                        <td>趣味轮滑赛</td>
+                        <td>轮滑社区</td>
+                    </tr>
+                    <tr>
+                        <td>使用帮助</td>
+                        <td>翱翔吧少年</td>
+                        <td>轮滑影业</td>
+                    </tr>
+                    <tr>
+                        <td>加入我们</td>
+                        <td>轮滑比赛</td>
+                        <td>轮滑视频</td>
+                    </tr>
+                    <tr>
+                        <td>用户协议</td>
+                        <td>更多活动</td>
+                        <td>轮滑销售</td>
+                    </tr>
+                    <tr>
+                        <td>企业店铺</td>
+                        <td> </td>
+                        <td>翱翔吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

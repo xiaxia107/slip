@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <title>首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .main {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            height: 81px;
+            background-color: #1a2b38;
+        }
+        
+        .top {
+            height: 100%;
+        }
+        
+        .top img {
+            margin-top: 2px;
+            width: 200px;
+            float: left;
+        }
+        
+        .top ul {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .top ul li {
+            display: block;
+            float: left;
+            transition: 0.3s;
+        }
+        
+        .top ul li:hover {
+            background-color: #aaa;
+        }
+        
+        .top ul li.liang {
+            background-color: #aaa;
+        }
+        
+        .top ul li a:hover {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .top ul li a {
+            display: block;
+            padding: 0 25px;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+        .top .top-you {
+            float: right;
+        }
+        
+        .top .top-you li span.iconfont {
+            color: #fff;
+        }
+        
+        #banner {
+            height: 370px;
+        }
+        
+        .lunbo {
+            width: 1520px;
+            height: 370px;
+            overflow: hidden;
+        }
+        
+        .box {
+            top: 0;
+            left: 0;
+            height: 370px;
+            width: 4560px;
+            animation: bo 10s steps(3) infinite;
+        }
+        
+        .lunbo .box img {
+            height: 370px;
+            width: 1520px;
+            display: block;
+            float: left;
+        }
+        
+        @keyframes bo {
+            0% {
+                margin-left: 0;
+            }
+            100% {
+                margin-left: -4560px;
+            }
+        }
+        
+        #huo {
+            height: 800px;
+        }
+        
+        #huo .dong {
+            height: 60px;
+            line-height: 80px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 5px;
+        }
+        
+        #huo .yi {
+            height: 250px;
+        }
+        
+        #huo .yi li {
+            margin-top: 20px;
+            float: left;
+            margin-right: 30px;
+            width: 300px;
+            height: 100px;
+            border: 1px solid #333;
+        }
+        
+        #huo .yi li:nth-child(4n) {
+            margin-right: 0px;
+        }
+        
+        #huo .yi li:last-child a span.iconfont {
+            font-weight: 800;
+            font-size: 35px;
+        }
+        
+        #huo .yi li a {
+            color: #333;
+            padding: 50px;
+            line-height: 100px;
+            font-size: 30px;
+        }
+        
+        #huo .yi li:hover {
+            background-color: #333;
+            transition: all 0.5s;
+        }
+        
+        #huo .yi li a:hover {
+            color: #fff;
+        }
+        
+        #huo .yi li span {
+            font-size: 30px;
+        }
+        
+        #huo .chuang {
+            height: 400px;
+            margin-top: 25px;
+        }
+        
+        #huo .chuang .er li {
+            margin-right: 30px;
+            float: left;
+            width: 222px;
+            height: 340px;
+            padding: 6px;
+            border: 1px solid #333;
+        }
+        
+        #huo .chuang .er li:hover {
+            background-color: #eee;
+        }
+        
+        #huo .chuang .er li:hover img {
+            transform: scale(1.1);
+        }
+        
+        #huo .chuang .er li:nth-child(5) {
+            margin-right: 0px;
+        }
+        
+        #huo .chuang .er li .tu {
+            width: 222px;
+            height: 222px;
+            overflow: hidden;
+        }
+        
+        #huo .chuang .er li img {
+            width: 222px;
+            transition: 0.5s;
+        }
+        
+        #huo .chuang .er li .ti {
+            text-align: center;
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        #huo .chuang .er li span {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        #bottom {
+            height: 320px;
+            background-color: rgb(26, 43, 56);
+            padding-top: 100px;
+        }
+        
+        #bottom .b-left {
+            float: left;
+            width: 500px;
+            height: 200px;
+            padding: 20px 40px;
+        }
+        
+        #bottom .b-left img {
+            width: 300px;
+        }
+        
+        #bottom .b-left div {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        
+        #bottom .b-right {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        #bottom .main .b-right table {
+            margin-top: 20px;
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+        
+        #bottom .main .b-right table th {
+            color: #fff;
+        }
+        
+        #bottom .b-right td {
+            width: 300px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            text-align: center;
+        }
+        
+        #bottom .b-right td:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top main">
+            <img src="images/logo.png" alt="">
+            <ul class="nav-1">
+                <li class="liang">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="html/luntan.html">论坛</a>
+                </li>
+                <li class="yi">
+                    <a href="html/zixun.html">咨询</a>
+
+                </li>
+                <li>
+                    <a href="html/jiaocheng.html">教程</a>
+                </li>
+                <li>
+                    <a href="html/zhuangbei.html">装备</a>
+                </li>
+                <li>
+                    <a href="html/jingcai.html">精彩</a>
+                </li>
+                <li>
+                    <a href="html/jiameng.html">加盟</a>
+                </li>
+                <li>
+                    <a href="html/gengduo.html">更多</a>
+                </li>
+            </ul>
+            <ul class="top-you">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe604;</span></a>
+                </li>
+                <li>
+                    <a href="html/logod.html">
+                        登录
+                    </a>
+                </li>
+                <li>
+                    <a href="html/logoz.html">注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="lunbo">
+            <div class="box">
+                <img src="images/b1.jpg" alt="">
+                <img src="images/b2.jpg" alt="">
+                <img src="images/b3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="huo">
+        <div class="main">
+            <div class="dong">
+                <span>主题活动</span>
+            </div>
+            <ul class="yi">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe60f; </span> 高端定制</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe615; </span> 轮滑百里行</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe601; </span> 24KATA</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe600; </span> 轮滑马拉松</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe602; </span> 环星海湖</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe61d; </span> 冬季轮滑赛</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe68d; </span> 咨询教程课</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe68e; </span> 翱翔轮滑社</a>
+                </li>
+            </ul>
+            <div class="dong">
+                <span>精彩原创</span>
+            </div>
+            <div class="chuang">
+                <ul class="er">
+                    <li>
+                        <a href="#">
+                            <div class="tu">
+                                <img src="images/c5.jpeg" alt="">
+                            </div>
+                        </a>
+                        <div class="ti">
+                            新生交流赛
+                        </div>
+                        <span>宁夏理工学院翱翔轮滑社新生交流赛于2020年11月18日下午在图书馆前顺利举行...</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="tu">
+                                <img src="images/c1.jpeg" alt="">
+                            </div>
+                        </a>
+                        <div class="ti">
+                            今日轮滑
+                        </div>
+                        <span>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="tu">
+                                <img src="images/c2.jpeg" alt="">
+                            </div>
+                        </a>
+                        <div class="ti">
+                            轮子陪你走过的风景
+                        </div>
+                        <span>落日余晖夕阳西下，带着说不出的美好，一起坠入远方的水平线。与轮滑为伴，去看身边无数美景</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="tu">
+                                <img src="images/c3.jpeg" alt="">
+                            </div>
+                        </a>
+                        <div class="ti">
+                            一群人的万圣夜
+                        </div>
+                        <span>一群人画着万圣节妆，迎着冷风一路向前，我们一直无所畏惧。</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="tu">
+                                <img src="images/c4.jpeg" alt="">
+                            </div>
+                        </a>
+                        <div class="ti">
+                            趣味轮滑赛
+                        </div>
+                        <span>为丰富校园生活，展现社团魅力，宁夏理工学院翱翔轮滑社举办趣味轮滑赛...</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div id="bottom">
+        <div class="main">
+            <div class="b-left">
+                <img src="images/logo.png" alt="">
+                <div>传承不变，热爱不变。轮滑人，加油！</div>
+            </div>
+            <div class="b-right">
+                <table>
+                    <tr>
+                        <th>关于</th>
+                        <th>活动</th>
+                        <th>翱翔轮滑社</th>
+                    </tr>
+                    <tr>
+                        <td>关于我们</td>
+                        <td>趣味轮滑赛</td>
+                        <td>轮滑社区</td>
+                    </tr>
+                    <tr>
+                        <td>使用帮助</td>
+                        <td>翱翔吧少年</td>
+                        <td>轮滑影业</td>
+                    </tr>
+                    <tr>
+                        <td>加入我们</td>
+                        <td>轮滑比赛</td>
+                        <td>轮滑视频</td>
+                    </tr>
+                    <tr>
+                        <td>用户协议</td>
+                        <td>更多活动</td>
+                        <td>轮滑销售</td>
+                    </tr>
+                    <tr>
+                        <td>企业店铺</td>
+                        <td> </td>
+                        <td>翱翔吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

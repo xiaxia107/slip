@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <title>教程</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .xinz {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            height: 81px;
+            background-color: #1a2b38;
+        }
+        
+        .top {
+            height: 100%;
+        }
+        
+        .top img {
+            margin-top: 2px;
+            width: 200px;
+            float: left;
+        }
+        
+        .top ul {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .top ul li {
+            display: block;
+            float: left;
+            transition: 0.3s;
+        }
+        
+        .top ul li:hover {
+            background-color: #aaa;
+        }
+        
+        .top ul li.liang {
+            background-color: #aaa;
+        }
+        
+        .top ul li a:hover {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .top ul li a {
+            display: block;
+            padding: 0 25px;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+        .top .top-you {
+            float: right;
+        }
+        
+        .top .top-you li span.iconfont {
+            color: #fff;
+        }
+        
+        .main {
+            height: 1464px;
+            margin-top: 30px;
+        }
+        
+        .main .left {
+            width: 790px;
+            float: left;
+        }
+        
+        .main .right {
+            width: 285px;
+            padding: 20px 40px 40px;
+            background-color: #fff;
+            float: right;
+        }
+        
+        .main .l-top {
+            padding: 0 40px 40px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        
+        .main .l-top .ge {
+            height: 73px;
+            padding: 20px 0 0;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .main .l-top .ge h3 {
+            color: #333;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .main .l-top ul li {
+            height: 200px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        
+        .main .l-top ul li .tup {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .main .l-top ul li .tup img {
+            width: 100%;
+            cursor: pointer;
+            transition: all 1s linear;
+        }
+        
+        .main .l-top ul li .tup img:hover {
+            transform: scale(1.1);
+        }
+        
+        .main .l-top ul li .wenzi h2 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 34px;
+        }
+        
+        .main .l-top ul li .wenzi p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #747f8c;
+        }
+        
+        .main .l-top ul li .wenzi .shi {
+            height: 20px;
+            margin-top: 90px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .main .l-top ul li .wenzi .shi .le {
+            float: left;
+        }
+        
+        .main .l-top ul li .wenzi .shi .ri {
+            float: right;
+        }
+        
+        .main .l-top ul li .wenzi .shi .ri span {
+            color: #999;
+        }
+        
+        .main .l-top ul li .wenzi h2:hover,
+        .main .l-top ul li .wenzi p:hover,
+        .main .l-top ul li .wenzi .le:hover {
+            color: #f00;
+        }
+        
+        .main .right {
+            border: 1px solid #ccc;
+        }
+        
+        .main .right:nth-child(3) {
+            margin-top: 30px;
+        }
+        
+        .main .right .r-top .title {
+            height: 30px;
+        }
+        
+        .main .right .r-top .title h3 {
+            float: left;
+        }
+        
+        .main .right .r-top .title span {
+            float: right;
+            cursor: pointer;
+        }
+        
+        .main .right .r-top ul {
+            margin-top: 20px;
+        }
+        
+        .main .right .r-top ul li {
+            width: 260;
+            margin-top: 35px;
+            cursor: pointer;
+        }
+        
+        .main .right .r-top ul li img {
+            width: 283px;
+        }
+        
+        #bottom {
+            height: 320px;
+            background-color: rgb(26, 43, 56);
+            padding-top: 100px;
+        }
+        
+        #bottom .b-left {
+            float: left;
+            width: 500px;
+            height: 200px;
+            padding: 20px 40px;
+        }
+        
+        #bottom .b-left img {
+            width: 300px;
+        }
+        
+        #bottom .b-left div {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        
+        #bottom .b-right {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        #bottom .xinz .b-right table {
+            margin-top: 20px;
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+        
+        #bottom .xinz .b-right table tr th {
+            color: #fff;
+        }
+        
+        #bottom .b-right td {
+            width: 300px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #999;
+            text-align: center;
+        }
+        
+        #bottom .b-right td:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top xinz">
+            <img src="../images/logo.png" alt="">
+            <ul class="nav-1">
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li>
+                    <a href="luntan.html">论坛</a>
+                </li>
+                <li>
+                    <a href="zixun.html">咨询</a>
+                </li>
+                <li class="liang">
+                    <a href="#">教程</a>
+                </li>
+                <li>
+                    <a href="zhuangbei.html">装备</a>
+                </li>
+                <li>
+                    <a href="jingcai.html">精彩</a>
+                </li>
+                <li>
+                    <a href="jiameng.html">加盟</a>
+                </li>
+                <li>
+                    <a href="gengduo.html">更多</a>
+                </li>
+            </ul>
+            <ul class="top-you">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe604;</span></a>
+                </li>
+                <li>
+                    <a href="logod.html">
+                        登录
+                    </a>
+                </li>
+                <li>
+                    <a href="logoz.html">注册</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="main xinz">
+        <div class="left">
+            <div class="l-top">
+                <div class="ge">
+                    <h3>教程</h3>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tup">
+                            <img src="../images/j1.jpg" alt="">
+                        </div>
+                        <div class="wenzi">
+                            <h2>轮滑基础教程︱轮滑编队滑行规则介绍</h2>
+                            <p>大家在熟练掌握滑行技术以后，就可以约上三五轮滑好友一起滑行在风景秀丽的公园或健身漫道，体验轮滑带来的乐趣,这一节我将向大家详细介 ...</p>
+                            <div class="shi">
+                                <div class="le">
+                                    轮滑入门教程
+                                </div>
+                                <div class="ri">
+                                    <span>2020-11-12</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tup">
+                            <img src="../images/j2.jpeg" alt="">
+                        </div>
+                        <div class="wenzi">
+                            <h2>轮滑基础教程︱轮滑滑行除了技术，还需要腿部力量</h2>
+                            <p>轮滑技术的提高需要大量的练习，同时，还有一个因素可以影响技术动作做出的质量，那就是轮滑运动的专门性力量...</p>
+                            <div class="shi">
+                                <div class="le">
+                                    轮滑入门教程
+                                </div>
+                                <div class="ri">
+
+                                    <span>2020-10-15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tup">
+                            <img src="../images/j3.jpg" alt="">
+                        </div>
+                        <div class="wenzi">
+                            <h2>轮滑基础教程︱轮滑过程如何急停？</h2>
+                            <p>轮滑不仅要学习如何滑行，同时也要学习如何更安全、高效的停止，这一节我们将学习几种有效的滑行制动方法。</p>
+                            <div class="shi">
+                                <div class="le">
+                                    轮滑入门教程
+                                </div>
+                                <div class="ri">
+                                    <span>2020-10-02</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tup">
+                            <img src="../images/j4.jpg" alt="">
+                        </div>
+                        <div class="wenzi">
+                            <h2>轮滑基础教程︱如何轮滑起跑？</h2>
+                            <p>为了使弯道滑行技术及高速滑行转态下转弯更加稳定，这节课我们将介绍几种提高弯道技术的练习手段及完整弯道滑行技术的滑行要点。</p>
+                            <div class="shi">
+                                <div class="le">
+                                    轮滑入门教程
+                                </div>
+                                <div class="ri">
+
+                                    <span>2020-09-20</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tup">
+                            <img src="../images/j1.jpg" alt="">
+                        </div>
+                        <div class="wenzi">
+                            <h2>轮滑基础教程︱轮滑编队滑行规则介绍</h2>
+                            <p>大家在熟练掌握滑行技术以后，就可以约上三五轮滑好友一起滑行在风景秀丽的公园或健身漫道，体验轮滑带来的乐趣,这一节我将向大家详细介 ...</p>
+                            <div class="shi">
+                                <div class="le">
+                                    轮滑入门教程
+                                </div>
+                                <div class="ri">
+                                    <span>2020-11-12</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="r-top">
+                <div class="title">
+                    <h3>热门教程</h3>
+                    <span>更多</span>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#"><img src="../images/r1.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/r2.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/r3.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/r1.jpeg" alt=""></a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="xinz">
+            <div class="b-left">
+                <img src="../images/logo.png" alt="">
+                <div>传承不变，热爱不变。轮滑人，加油！</div>
+            </div>
+            <div class="b-right">
+                <table>
+                    <tr>
+                        <th>关于</th>
+                        <th>活动</th>
+                        <th>翱翔轮滑社</th>
+                    </tr>
+                    <tr>
+                        <td>关于我们</td>
+                        <td>趣味轮滑赛</td>
+                        <td>轮滑社区</td>
+                    </tr>
+                    <tr>
+                        <td>使用帮助</td>
+                        <td>翱翔吧少年</td>
+                        <td>轮滑影业</td>
+                    </tr>
+                    <tr>
+                        <td>加入我们</td>
+                        <td>轮滑比赛</td>
+                        <td>轮滑视频</td>
+                    </tr>
+                    <tr>
+                        <td>用户协议</td>
+                        <td>更多活动</td>
+                        <td>轮滑销售</td>
+                    </tr>
+                    <tr>
+                        <td>企业店铺</td>
+                        <td> </td>
+                        <td>翱翔吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

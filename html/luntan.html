@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛</title>
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .main {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            height: 81px;
+            background-color: #1a2b38;
+        }
+        
+        .top {
+            height: 100%;
+        }
+        
+        .top img {
+            margin-top: 2px;
+            width: 200px;
+            float: left;
+        }
+        
+        .top ul {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .top ul li {
+            display: block;
+            float: left;
+            transition: 0.3s;
+        }
+        
+        .top ul li:hover {
+            background-color: #aaa;
+        }
+        
+        .top ul li.liang {
+            background-color: #aaa;
+        }
+        
+        .top ul li a:hover {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .top ul li a {
+            display: block;
+            padding: 0 25px;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+        .top .top-you {
+            float: right;
+        }
+        
+        .top .top-you li span.iconfont {
+            color: #fff;
+        }
+        
+        #banner {
+            height: 1370px;
+        }
+        
+        #banner .main .box {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+        
+        #banner .main .box .xin {
+            background-color: #fff;
+            height: 382px;
+        }
+        
+        #banner .main .box .ti {
+            height: 30px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        #banner .xin .x-left {
+            cursor: pointer;
+            position: relative;
+            width: 510px;
+            float: left;
+            overflow: hidden;
+        }
+        
+        #banner .xin .x-left .zi {
+            padding-top: 30px;
+            display: none;
+            position: absolute;
+            width: 510px;
+            height: 350px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        #banner .xin .x-left .zi p {
+            color: #ccc;
+            height: 25px;
+            margin-left: 300px;
+        }
+        
+        #banner .xin .x-left:hover .zi {
+            display: block;
+        }
+        
+        #banner .xin .x-left img {
+            width: 510px;
+        }
+        
+        #banner .xin .x-right {
+            margin-left: 50px;
+            width: 720px;
+            float: left;
+        }
+        
+        #banner .xin .x-right .top {
+            height: 60px;
+        }
+        
+        #banner .xin .x-right .top a {
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        
+        #banner .xin .x-right .top a.liang,
+        #banner .xin .x-right .top a:hover {
+            color: #fff;
+            background-color: #aaa;
+            border-radius: 5px;
+        }
+        
+        #banner .xin .x-right table {
+            cursor: pointer;
+            height: 322px;
+            width: 720px;
+        }
+        
+        #banner .xin .x-right table tr:hover {
+            text-decoration: underline;
+        }
+        
+        #banner .box .xin .ren {
+            width: 1280px;
+            height: 383px;
+        }
+        
+        #banner .box .xin .ren td {
+            cursor: pointer;
+            width: 640px;
+            padding-left: 20px;
+        }
+        
+        #banner .box .xin .ren td div {
+            float: left;
+        }
+        
+        #banner .box .xin .ren tr td .tu {
+            width: 80px;
+        }
+        
+        #banner .box .xin .ren td .tu img {
+            width: 60px;
+            border-radius: 50%;
+        }
+        
+        #banner .box .xin .ren td .zi p:nth-child(1) {
+            font-size: 18px;
+        }
+        
+        #banner .box .xin .ren td .zi p:nth-child(2) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        
+        #banner .box .xin .ren td .zi p:nth-child(3) {
+            line-height: 20px;
+            font-size: 12px;
+        }
+        
+        #bottom {
+            height: 320px;
+            background-color: rgb(26, 43, 56);
+            padding-top: 100px;
+        }
+        
+        #bottom .b-left {
+            float: left;
+            width: 500px;
+            height: 200px;
+            padding: 20px 40px;
+        }
+        
+        #bottom .b-left img {
+            width: 300px;
+        }
+        
+        #bottom .b-left div {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        
+        #bottom .b-right {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        #bottom .main .b-right table {
+            margin-top: 20px;
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+        
+        #bottom .main .b-right table th {
+            color: #fff;
+        }
+        
+        #bottom .b-right td {
+            width: 300px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #999;
+            text-align: center;
+        }
+        
+        #bottom .b-right td:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top main">
+            <img src="../images/logo.png" alt="">
+            <ul class="nav-1">
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li class="liang">
+                    <a href="#">论坛</a>
+                </li>
+                <li>
+                    <a href="zixun.html">咨询</a>
+                </li>
+                <li>
+                    <a href="jiaocheng.html">教程</a>
+                </li>
+                <li>
+                    <a href="zhuangbei.html">装备</a>
+                </li>
+                <li>
+                    <a href="jingcai.html">精彩</a>
+                </li>
+                <li>
+                    <a href="jiameng.html">加盟</a>
+                </li>
+                <li>
+                    <a href="gengduo.html">更多</a>
+                </li>
+            </ul>
+            <ul class="top-you">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe604;</span></a>
+                </li>
+                <li>
+                    <a href="logod.html">
+                        登录
+                    </a>
+                </li>
+                <li>
+                    <a href="logoz.html">注册</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="main">
+            <div class="box">
+                <div class="ti">论坛</div>
+                <div class="xin">
+                    <div class="x-left">
+                        <div class="zi">
+                            <p>万圣夜</p>
+                            <p>一群人画着万圣节妆</p>
+                            <p>迎着冷风一路向前</p>
+                            <p>我们一直无所畏惧</p>
+
+                        </div>
+                        <img src="../images/lun.jpeg" alt="">
+                    </div>
+                    <div class="x-right">
+                        <div class="top">
+                            <a href="#" class="liang">最新发表</a>
+                            <a href="#">最新恢复</a>
+                            <a href="#">精华帖子</a>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>1、晚上的这里外快随便抓<span>【11回复/36浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>2、MPC黑魔法速滑比赛专用轮<span>【10回复/38浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>3、工小专访| 南国“冰球”小将——风一样的少年<span>【36回复/45浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>4、活动公告 2020湖北快乐轮滑挺进大别山刷百里画廊活动<span>【58回复/46浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>5、我的2020秋季行云流水环太湖活动<span>【0回复/36浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>6、回顾 |世界轮滑之都南京市第二十二届速度轮滑比赛<span>【10回复/48浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>7、苏州市第17届轮滑比赛如约而至 今年创下多个首次！<span>【8回复/53浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                            <tr>
+                                <td>8、翱翔轮滑社<span>【10回复/150浏览】</span></td>
+                                <td>2020-11-27</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="ti">经典活动</div>
+                <div class="xin">
+                    <table class="ren">
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c5.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>轮滑动态</p>
+                                    <p>主题：1167，贴数：5533</p>
+                                    <p>工小专访| 南国“冰球”小将——风一样的少年</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c1.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>今日轮滑</p>
+                                    <p>主题：1167，贴数：7433</p>
+                                    <p>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c2.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>轮子陪你走过的风景</p>
+                                    <p>主题：2267，贴数：8433</p>
+                                    <p>落日余晖夕阳西下，带着说不出的美好，一起坠入远方的水平线。与轮滑为伴，去看身边无数美景</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c3.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>万圣夜</p>
+                                    <p>主题：3567，贴数：8523</p>
+                                    <p>一群人画着万圣节妆，迎着冷风一路向前，我们一直无所畏惧。</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c4.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>趣味轮滑</p>
+                                    <p>主题：2167，贴数：7933</p>
+                                    <p>为丰富校园生活，展现社团魅力，宁夏理工学院翱翔轮滑社举办趣味轮滑赛...</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/c5.jpeg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>新生交流赛</p>
+                                    <p>主题：1267，贴数：6433</p>
+                                    <p>宁夏理工学院翱翔轮滑社新生交流赛于2020年11月18日下午在图书馆前顺利举行...</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box">
+                <div class="ti">技术讨论 Skating Technology</div>
+                <div class="xin">
+                    <table class="ren">
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t1.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>新手上路</p>
+                                    <p>主题：6226，贴数：7万</p>
+                                    <p>晚上的这里外快随便抓</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t2.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>自由式轮滑 Freestyle</p>
+                                    <p>主题：1167，贴数：7433</p>
+                                    <p>秦雨晴，中国风女孩的轮滑人生</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t3.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>花样轮滑 Aristic</p>
+                                    <p>主题：2267，贴数：8433</p>
+                                    <p>单排花样之跳跃完全可以取代双排</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t4.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>速度轮滑 Speed</p>
+                                    <p>主题：3567，贴数：8523</p>
+                                    <p>MPC黑魔法速滑比赛专用轮</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t5.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>陆地冰球 hockey</p>
+                                    <p>主题：2167，贴数：7933</p>
+                                    <p>Inline Hockey 单排轮滑球与陆地 ...</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tu">
+                                    <img src="../images/t6.jpg" alt="">
+                                </div>
+                                <div class="zi">
+                                    <p>轮滑器材 Equipments</p>
+                                    <p>主题：1267，贴数：6433</p>
+                                    <p>请问有用过越野轮滑鞋的朋友吗？ ...</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="main">
+            <div class="b-left">
+                <img src="../images/logo.png" alt="">
+                <div>传承不变，热爱不变。轮滑人，加油！</div>
+            </div>
+            <div class="b-right">
+                <table>
+                    <tr>
+                        <th>关于</th>
+                        <th>活动</th>
+                        <th>翱翔轮滑社</th>
+                    </tr>
+                    <tr>
+                        <td>关于我们</td>
+                        <td>趣味轮滑赛</td>
+                        <td>轮滑社区</td>
+                    </tr>
+                    <tr>
+                        <td>使用帮助</td>
+                        <td>翱翔吧少年</td>
+                        <td>轮滑影业</td>
+                    </tr>
+                    <tr>
+                        <td>加入我们</td>
+                        <td>轮滑比赛</td>
+                        <td>轮滑视频</td>
+                    </tr>
+                    <tr>
+                        <td>用户协议</td>
+                        <td>更多活动</td>
+                        <td>轮滑销售</td>
+                    </tr>
+                    <tr>
+                        <td>企业店铺</td>
+                        <td> </td>
+                        <td>翱翔吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

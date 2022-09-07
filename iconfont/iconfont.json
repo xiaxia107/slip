@@ -1,0 +1,72 @@
+{
+  "id": "2234814",
+  "name": "轮滑",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1019",
+      "name": "帐篷",
+      "font_class": "zhangpeng",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2372350",
+      "name": "赛程",
+      "font_class": "saicheng",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "4518877",
+      "name": "咨询",
+      "font_class": "zixun",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "5492936",
+      "name": "高端服务",
+      "font_class": "gaoduanfuwu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "8988899",
+      "name": "汽车",
+      "font_class": "che1-copy",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "12123862",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "13069404",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18510013",
+      "name": "翅膀",
+      "font_class": "weibiaoti1-copy",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "18509575",
+      "name": "搜索",
+      "font_class": "sousuo-copy",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

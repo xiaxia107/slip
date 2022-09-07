@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <title>精彩视频</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        #header {
+            height: 81px;
+            background-color: #1a2b38;
+        }
+        
+        .top {
+            height: 100%;
+            width: 1300px;
+            margin: auto;
+        }
+        
+        .top img {
+            margin-top: 2px;
+            width: 200px;
+            float: left;
+        }
+        
+        .top ul {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .top ul li {
+            display: block;
+            float: left;
+            transition: 0.3s;
+        }
+        
+        .top ul li:hover {
+            background-color: #aaa;
+        }
+        
+        .top ul li.liang {
+            background-color: #aaa;
+        }
+        
+        .top ul li a:hover {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        .top ul li a {
+            display: block;
+            padding: 0 25px;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+        .top .top-you {
+            float: right;
+        }
+        
+        .top .top-you li span.iconfont {
+            color: #fff;
+        }
+        
+        #mv {
+            height: 560px;
+            background-color: rgb(26, 43, 56);
+        }
+        
+        #mv .main .shipin {
+            margin: auto;
+            width: 960px;
+        }
+        
+        #mv .main .shipin video {
+            width: 960px;
+        }
+        
+        #shi {
+            padding-top: 30px;
+            height: 830px;
+            background-color: rgb(234, 234, 234);
+        }
+        
+        #shi .main {
+            width: 1130px;
+            margin: auto;
+        }
+        
+        #shi .main ul li {
+            float: left;
+            margin: 0 10px 10px 0;
+            width: 270px;
+            height: 390px;
+            background-color: #fff;
+            transition: all 0.5s;
+        }
+        
+        #shi .main ul li:nth-child(4n) {
+            margin-right: 0;
+        }
+        
+        #shi .main ul li a img {
+            width: 270px;
+        }
+        
+        #shi .main ul li div {
+            font-weight: 600;
+            line-height: 35px;
+            padding-left: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        #shi .main ul li p {
+            margin: 5px 10px;
+            font-size: 14px;
+        }
+        
+        #shi .main ul li:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 5px 5px rgba(150, 150, 150, 0.5);
+        }
+        
+        #shi .main ul li div:hover,
+        #shi .main ul li p:hover {
+            color: #f00;
+        }
+        
+        #bottom {
+            height: 320px;
+            background-color: rgb(26, 43, 56);
+            padding-top: 100px;
+        }
+        
+        #bottom .b-left {
+            float: left;
+            width: 500px;
+            height: 200px;
+            padding: 20px 40px;
+        }
+        
+        .xinz {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        
+        #bottom .b-left img {
+            width: 300px;
+        }
+        
+        #bottom .b-left div {
+            margin-top: 20px;
+            color: #ccc;
+        }
+        
+        #bottom .b-right {
+            float: left;
+            width: 600px;
+            height: 200px;
+        }
+        
+        #bottom .xinz .b-right table {
+            margin-top: 20px;
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+        
+        #bottom .xinz .b-right table tr th {
+            color: #fff;
+        }
+        
+        #bottom .b-right td {
+            width: 300px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #999;
+            text-align: center;
+        }
+        
+        #bottom .b-right td:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top">
+            <img src="../images/logo.png" alt="">
+            <ul class="nav-1">
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li>
+                    <a href="luntan.html">论坛</a>
+                </li>
+                <li>
+                    <a href="zixun.html">咨询</a>
+                </li>
+                <li>
+                    <a href="jiaocheng.html">教程</a>
+                </li>
+                <li>
+                    <a href="zhuangbei.html">装备</a>
+                </li>
+                <li class="liang">
+                    <a href="#">精彩</a>
+                </li>
+                <li>
+                    <a href="jiameng.html">加盟</a>
+                </li>
+                <li>
+                    <a href="gengduo.html">更多</a>
+                </li>
+            </ul>
+            <ul class="top-you">
+                <li>
+                    <a href="#"><span class="iconfont">&#xe604;</span></a>
+                </li>
+                <li>
+                    <a href="logod.html">
+                        登录
+                    </a>
+                </li>
+                <li>
+                    <a href="logoz.html">注册</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="mv">
+        <div class="main">
+            <div class="shipin">
+
+                <video src="../media/mv.mp4" controls autoplay muted loop></video>
+
+            </div>
+        </div>
+    </div>
+    <div id="shi">
+        <div class="main">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../images/c1.jpeg" alt="">
+                        <div>今日轮滑</div>
+                        <p>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/c2.jpeg" alt="">
+                        <div>轮子陪你走过的风景</div>
+                        <p>落日余晖夕阳西下，带着说不出的美好，一起坠入远方的水平线。与轮滑为伴，去看身边无数美景</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/c3.jpeg" alt="">
+                        <div>一群人的万圣夜</div>
+                        <p>一群人画着万圣节妆，迎着冷风一路向前，我们一直无所畏惧。</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/c4.jpeg" alt="">
+                        <div>趣味轮滑赛</div>
+                        <p>为丰富校园生活，展现社团魅力，宁夏理工学院翱翔轮滑社举办趣味轮滑赛...</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/c5.jpeg" alt="">
+                        <div>新生交流赛</div>
+                        <p>宁夏理工学院翱翔轮滑社新生交流赛于2020年11月18日下午在图书馆前顺利举行...</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/j2.jpeg" alt="">
+                        <div>轮滑</div>
+                        <p>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/c2.jpeg" alt="">
+                        <div>轮滑</div>
+                        <p>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../images/j4.jpg" alt="">
+                        <div>轮滑</div>
+                        <p>今天的我们是风中的轮滑，是青春的热爱。相信明天的我们会比今天更加厉害。</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="xinz">
+            <div class="b-left">
+                <img src="../images/logo.png" alt="">
+                <div>传承不变，热爱不变。轮滑人，加油！</div>
+            </div>
+            <div class="b-right">
+                <table>
+                    <tr>
+                        <th>关于</th>
+                        <th>活动</th>
+                        <th>翱翔轮滑社</th>
+                    </tr>
+                    <tr>
+                        <td>关于我们</td>
+                        <td>趣味轮滑赛</td>
+                        <td>轮滑社区</td>
+                    </tr>
+                    <tr>
+                        <td>使用帮助</td>
+                        <td>翱翔吧少年</td>
+                        <td>轮滑影业</td>
+                    </tr>
+                    <tr>
+                        <td>加入我们</td>
+                        <td>轮滑比赛</td>
+                        <td>轮滑视频</td>
+                    </tr>
+                    <tr>
+                        <td>用户协议</td>
+                        <td>更多活动</td>
+                        <td>轮滑销售</td>
+                    </tr>
+                    <tr>
+                        <td>企业店铺</td>
+                        <td> </td>
+                        <td>翱翔吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
